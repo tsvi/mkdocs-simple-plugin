@@ -73,6 +73,7 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="athackstmkdocs-simple-plugin">athackst/mkdocs-simple-plugin</h1>
+<p><img alt="Docs" src="https://github.com/athackst/mkdocs-simple-plugin/workflows/Docs/badge.svg" /> <img alt="Test" src="https://github.com/athackst/mkdocs-simple-plugin/workflows/Test/badge.svg" /></p>
 <p>This plugin enables you to build documentation from markdown files interspersed within your code.  It is designed for the way developers commonly write documentation in their own code -- with simple markdown files.</p>
 <h2 id="about">About</h2>
 <p>You may be wondering why you would want to generate a static site for your project, without doing the typical "wiki" thing of consolidating all documentation within a <code>docs</code> folder.</p>
@@ -129,7 +130,7 @@ ignore_directories: # Folders that should be ignored to add md files
   - &quot;drafts&quot;
 </code></pre>
 
-<p><strong>Note</strong></p>
+<p>Some things to note:</p>
 <ul>
 <li>Files in the <code>docs_dir</code> (by default <code>docs</code>) will be merged with any other documentation in your repository.</li>
 <li>If you have specified <code>nav</code> elements in your mkdocs.yml, only those pages will be rendered in the site</li>
@@ -144,8 +145,13 @@ ignore_directories: # Folders that should be ignored to add md files
 </code></pre>
 
 <h3 id="deploy">Deploy</h3>
-<p>TODO
-<!--TODO github integration --></p>
+<p>After you build, you'll need to initialize your deployment by running the gh-deploy command for mkdocs.  This will set up the gh-pages branch and copy the site over.</p>
+<pre><code class="bash">mkdocs gh-deploy
+</code></pre>
+
+<p>Next, you'll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a></p>
+<!--TODO github integration -->
+
 <h2 id="license">License</h2>
 <p>This software is licensed under <a href="LICENSE">Apache 2.0</a></p>
 <h2 id="contributing">Contributing</h2></div>
@@ -208,5 +214,5 @@ ignore_directories: # Folders that should be ignored to add md files
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-05-03 20:53:56
+Build Date UTC : 2020-05-03 21:43:58
 -->
