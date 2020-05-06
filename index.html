@@ -1,219 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>mkdocs-simple-plugin</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>mkdocs-simple-plugin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "mkdocs-simple-plugin";
+    var mkdocs_page_input_path = "README.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
 
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">mkdocs-simple-plugin</a>
+<body class="wy-body-for-nav" role="document">
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav ml-auto">
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+  <div class="wy-grid-for-nav">
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#athackstmkdocs-simple-plugin" class="nav-link">athackst/mkdocs-simple-plugin</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#about" class="nav-link">About</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#getting-started" class="nav-link">Getting Started</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#license" class="nav-link">License</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#contributing" class="nav-link">Contributing</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> mkdocs-simple-plugin</a>
+        
+      </div>
 
-<h1 id="athackstmkdocs-simple-plugin">athackst/mkdocs-simple-plugin</h1>
-<p><a href="http://athackst.github.io/mkdocs-simple-plugin">athackst.github.io/mkdocs-simple-plugin</a></p>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">mkdocs-simple-plugin</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#about">About</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#basic">Basic</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#advanced">Advanced</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#test">Test</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploy">Deploy</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#license">License</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING/">Contributing</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">mkdocs-simple-plugin</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>mkdocs-simple-plugin</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mkdocs-simple-plugin">mkdocs-simple-plugin<a class="headerlink" href="#mkdocs-simple-plugin" title="Permanent link">&para;</a></h1>
+<p>[ <a href="http://athackst.github.io/mkdocs-simple-plugin">Docs</a> | <a href="http://github.com/athackst/mkdocs-simple-plugin">Code</a> ]</p>
 <p><img alt="Test" src="https://github.com/athackst/mkdocs-simple-plugin/workflows/Test/badge.svg" /> <img alt="Docs" src="https://github.com/athackst/mkdocs-simple-plugin/workflows/Docs/badge.svg" /></p>
-<p>This plugin enables you to build documentation from markdown files interspersed within your code.  It is designed for the way developers commonly write documentation in their own code -- with simple markdown files.</p>
-<h2 id="about">About</h2>
-<p>You may be wondering why you would want to generate a static site for your project, without doing the typical "wiki" thing of consolidating all documentation within a <code>docs</code> folder.</p>
+<p>This plugin enables you to build documentation from markdown files interspersed within your code.  It is designed for the way developers commonly write documentation in their own code &ndash; with simple markdown files.</p>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
+<p>You may be wondering why you would want to generate a static site for your project, without doing the typical &ldquo;wiki&rdquo; thing of consolidating all documentation within a single <code>docs</code> folder or using a single <code>README</code> file.</p>
 <ol>
 <li>
-<p>My repository is too big for a single file</p>
-<p>Sometimes it isn't really feasible to consolidate all documentation within an upper level <code>docs</code> directory.  This is often the case with medium/large repositories.  In general, if your code base is too large to fit well within a single <code>include</code> directory, your code base is probably also too large for documentation to fit within a single <code>docs</code> directory.  </p>
-<p>Since it's typically easier to keep documentation up to date when it lives as close to the code as possible, it is better to create multiple sources for documentation.</p>
+<p>My repository is too big for a single documentation source.</p>
+<p>Sometimes it isn&rsquo;t really feasible to consolidate all documentation within an upper level <code>docs</code> directory.  This is often the case with medium/large repositories.  In general, if your code base is too large to fit well within a single <code>include</code> directory, your code base is probably also too large for documentation to fit within a single <code>docs</code> directory.  </p>
+<p>Since it&rsquo;s typically easier to keep documentation up to date when it lives as close to the code as possible, it is better to create multiple sources for documentation.</p>
 </li>
 <li>
-<p>My repository is too simple for advanced documentation</p>
+<p>My repository is too simple for advanced documentation.</p>
 <p>If your code base is <em>very very</em> large, something like the <a href="https://github.com/spotify/mkdocs-monorepo-plugin">monorepo plugin</a> might better fit your needs.</p>
-<p>For most other medium+ repositories that have grown over time, you probably have scattered documentation throughout your code.  By combining all of that documentation while keeping folder structure, you can better surface and collaborate with others. And, let's face it.  That documentation is probably all in markdown, since github renders it nicely.</p>
+<p>For most other medium+ repositories that have grown over time, you probably have scattered documentation throughout your code.  By combining all of that documentation while keeping folder structure, you can better surface and collaborate with others. And, let&rsquo;s face it.  That documentation is probably all in markdown, since github renders it nicely.</p>
 </li>
 <li>
 <p>I want a pretty documentation site without the hassle.</p>
-<p>Finally, you may be interested in this plugin if you have a desire for stylized documentation, but don't want to invest the time/energy in replicating information you already have in your README.md files, and you want to keep them where they are (thank you very much).</p>
+<p>Finally, you may be interested in this plugin if you have a desire for stylized documentation, but don&rsquo;t want to invest the time/energy in replicating information you already have in your README.md files, and you want to keep them where they are (thank you very much).</p>
 </li>
 </ol>
-<h2 id="getting-started">Getting Started</h2>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>This plugin was made to be super simple to use.</p>
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>You will need to have <a href="https://www.mkdocs.org/">mkdocs</a> installed on your system.  I recommend installing it via pip to get the latest version.</p>
-<pre><code class="bash">sudo apt-get install python-pip
+<pre class="highlight"><code class="language-bash">sudo apt-get install python-pip
 pip install --upgrade pip --user
-pip install mkdocs --user
-</code></pre>
+pip install mkdocs --user</code></pre>
 
-<h3 id="installation">Installation</h3>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>Then, install the plugin.</p>
-<pre><code class="bash">pip install mkdocs-simple-plugin
-</code></pre>
+<pre class="highlight"><code class="language-bash">pip install mkdocs-simple-plugin</code></pre>
 
-<h3 id="usage">Usage</h3>
-<p>It's easy to use this plugin.  You can either use the generation script included, or set up your own custom config.</p>
-<h4 id="basic">Basic</h4>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>It&rsquo;s easy to use this plugin.  You can either use the generation script included, or set up your own custom config.</p>
+<h4 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h4>
 <p>Basic usage was optimized around ease of use.  Simply run</p>
-<pre><code class="bash">mkdocs_simple_gen
-</code></pre>
+<pre class="highlight"><code class="language-bash">mkdocs_simple_gen</code></pre>
 
-<p>and you're all set!</p>
-<h4 id="advanced">Advanced</h4>
+<p>and you&rsquo;re all set!</p>
+<h4 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h4>
 <p>Advanced usage is <em>also</em> easy.</p>
-<p>Simply create a <code>mkdocs.yml</code> file in the root of your directory and add this plugin to it's plugin list</p>
-<pre><code class="yaml">site_name: your_site_name
+<p>Create a <code>mkdocs.yml</code> file in the root of your directory and add this plugin to it&rsquo;s plugin list.</p>
+<pre class="highlight"><code class="language-yaml">site_name: your_site_name
 plugins:
-  - simple
-</code></pre>
+  - simple</code></pre>
 
-<p>If you'd like, you can specify some additional configuration settings</p>
-<pre><code class="yaml"># simple plugin configuration options
+<p>If you&rsquo;d like, you can specify some additional configuration settings.</p>
+<pre class="highlight"><code class="language-yaml"># simple plugin configuration options
 ignore_hidden: True # Ignore md files in hidden directories (those starting with a '.')
 ignore_directories: # Folders that should be ignored to add md files
-  - &quot;drafts&quot;
-</code></pre>
+  - "drafts"</code></pre>
 
-<p>Some things to note:</p>
-<ul>
-<li>Files in the <code>docs_dir</code> (by default <code>docs</code>) will be merged with any other documentation in your repository.</li>
-<li>If you have specified <code>nav</code> elements in your mkdocs.yml, only those pages will be rendered in the site</li>
-</ul>
-<p>Then, you build the mkdocs from the command line</p>
-<pre><code class="bash">mkdocs build
-</code></pre>
+<p>Note:  Files in the <code>docs_dir</code> (by default <code>docs</code>) will be merged with any other documentation in your repository.</p>
+<p>Then, you can build the mkdocs from the command line.</p>
+<pre class="highlight"><code class="language-bash">mkdocs build</code></pre>
 
-<h3 id="test">Test</h3>
-<p>And you can even preview the resulting site</p>
-<pre><code class="bash">mkdocs serve
-</code></pre>
+<h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
+<p>One of the best parts of mkdocs is it&rsquo;s ability to serve (and update!) your documentation site locally.</p>
+<pre class="highlight"><code class="language-bash">mkdocs serve</code></pre>
 
-<h3 id="deploy">Deploy</h3>
-<p>After you build, you'll need to initialize your deployment by running the gh-deploy command for mkdocs.  This will set up the gh-pages branch and copy the site over.</p>
-<pre><code class="bash">mkdocs gh-deploy
-</code></pre>
+<h3 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h3>
+<p>After you build, you&rsquo;ll need to initialize your deployment by running the gh-deploy command for mkdocs.  This will set up the gh-pages branch and copy the site over.</p>
+<pre class="highlight"><code class="language-bash">mkdocs gh-deploy</code></pre>
 
-<p>Next, you'll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a></p>
+<p>Next, you&rsquo;ll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a></p>
 <!--TODO github integration -->
 
-<h2 id="license">License</h2>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
 <p>This software is licensed under <a href="https://github.com/athackst/mkdocs-simple-plugin/blob/master/LICENSE">Apache 2.0</a></p>
-<h2 id="contributing">Contributing</h2></div>
+              
             </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js" defer></script>
-
-        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CONTRIBUTING/" class="btn btn-neutral float-right" title="Contributing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
     </div>
-</div>
+  
 
-    </body>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="CONTRIBUTING/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
 </html>
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-05-05 15:46:04
+Build Date UTC : 2020-05-06 07:05:28
 -->
