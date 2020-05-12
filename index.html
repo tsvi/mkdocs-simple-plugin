@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>mkdocs-simple-plugin</title>
+  <title>athackst/mkdocs-simple-plugin</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> mkdocs-simple-plugin</a>
+        <a href="." class="icon icon-home"> athackst/mkdocs-simple-plugin</a>
         
       </div>
 
@@ -50,11 +50,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    <li class="toctree-l3"><a class="reference internal" href="#build-your-docs">Build your docs</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#basic">Basic</a>
     </li>
@@ -62,9 +58,19 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#test">Test</a>
+    <li class="toctree-l3"><a class="reference internal" href="#run-a-local-server">Run a local server</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deploy">Deploy</a>
+    <li class="toctree-l3"><a class="reference internal" href="#deploy-to-gh-pages">Deploy to gh-pages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build-from-source">Build from source</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#develop">Develop</a>
     </li>
         </ul>
     </li>
@@ -86,7 +92,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">mkdocs-simple-plugin</a>
+        <a href=".">athackst/mkdocs-simple-plugin</a>
       </nav>
 
       
@@ -115,35 +121,29 @@
 <p>This plugin enables you to build documentation from markdown files interspersed within your code.  It is designed for the way developers commonly write documentation in their own code &ndash; with simple markdown files.</p>
 <h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
 <p>You may be wondering why you would want to generate a static site for your project, without doing the typical &ldquo;wiki&rdquo; thing of consolidating all documentation within a single <code>docs</code> folder or using a single <code>README</code> file.</p>
-<ol>
+<ul>
 <li>
-<p>My repository is too big for a single documentation source.</p>
+<p><strong>My repository is too big for a single documentation source.</strong></p>
 <p>Sometimes it isn&rsquo;t really feasible to consolidate all documentation within an upper level <code>docs</code> directory.  This is often the case with medium/large repositories.  In general, if your code base is too large to fit well within a single <code>include</code> directory, your code base is probably also too large for documentation to fit within a single <code>docs</code> directory.  </p>
 <p>Since it&rsquo;s typically easier to keep documentation up to date when it lives as close to the code as possible, it is better to create multiple sources for documentation.</p>
 </li>
 <li>
-<p>My repository is too simple for advanced documentation.</p>
+<p><strong>My repository is too simple for advanced documentation.</strong></p>
 <p>If your code base is <em>very very</em> large, something like the <a href="https://github.com/spotify/mkdocs-monorepo-plugin">monorepo plugin</a> might better fit your needs.</p>
 <p>For most other medium+ repositories that have grown over time, you probably have scattered documentation throughout your code.  By combining all of that documentation while keeping folder structure, you can better surface and collaborate with others. And, let&rsquo;s face it.  That documentation is probably all in markdown, since github renders it nicely.</p>
 </li>
 <li>
-<p>I want a pretty documentation site without the hassle.</p>
+<p><strong>I want a pretty documentation site without the hassle.</strong></p>
 <p>Finally, you may be interested in this plugin if you have a desire for stylized documentation, but don&rsquo;t want to invest the time/energy in replicating information you already have in your README.md files, and you want to keep them where they are (thank you very much).</p>
 </li>
-</ol>
+</ul>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>This plugin was made to be super simple to use.</p>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>You will need to have <a href="https://www.mkdocs.org/">mkdocs</a> installed on your system.  I recommend installing it via pip to get the latest version.</p>
-<pre class="highlight"><code class="language-bash">sudo apt-get install python-pip
-pip install --upgrade pip --user
-pip install mkdocs --user</code></pre>
-
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<p>Then, install the plugin.</p>
+<p>Install the plugin with pip.</p>
 <pre class="highlight"><code class="language-bash">pip install mkdocs-simple-plugin</code></pre>
 
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p><em>Python 3.x, 3.5, 3.6, 3.7, 3.8 supported.</em></p>
+<h3 id="build-your-docs">Build your docs<a class="headerlink" href="#build-your-docs" title="Permanent link">&para;</a></h3>
 <p>It&rsquo;s easy to use this plugin.  You can either use the generation script included, or set up your own custom config.</p>
 <h4 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h4>
 <p>Basic usage was optimized around ease of use.  Simply run</p>
@@ -167,15 +167,59 @@ ignore_directories: # Folders that should be ignored to add md files
 <p>Then, you can build the mkdocs from the command line.</p>
 <pre class="highlight"><code class="language-bash">mkdocs build</code></pre>
 
-<h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
+<h3 id="run-a-local-server">Run a local server<a class="headerlink" href="#run-a-local-server" title="Permanent link">&para;</a></h3>
 <p>One of the best parts of mkdocs is it&rsquo;s ability to serve (and update!) your documentation site locally.</p>
 <pre class="highlight"><code class="language-bash">mkdocs serve</code></pre>
 
-<h3 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h3>
+<h3 id="deploy-to-gh-pages">Deploy to gh-pages<a class="headerlink" href="#deploy-to-gh-pages" title="Permanent link">&para;</a></h3>
 <p>After you build, you&rsquo;ll need to initialize your deployment by running the gh-deploy command for mkdocs.  This will set up the gh-pages branch and copy the site over.</p>
 <pre class="highlight"><code class="language-bash">mkdocs gh-deploy</code></pre>
 
-<p>Next, you&rsquo;ll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a></p>
+<p>Next, you&rsquo;ll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a> for more information.</p>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p>Additionally, you can use this plugin using the <code>athackst/mkdocs-simple-plugin</code> docker image.</p>
+<p>By using the docker image, you don&rsquo;t need to have the plugin or its dependencies installed on your system.</p>
+<p>Below are some useful commands:</p>
+<ul>
+<li>
+<p>Build your docs</p>
+<pre class="highlight"><code class="language-bash">docker run --rm -it -v ${PWD}:/docs athackst/mkdocs-simple-plugin mkdocs_simple_gen</code></pre>
+
+</li>
+<li>
+<p>Run a local server</p>
+<pre class="highlight"><code class="language-bash">docker run --rm -it -p 8000:8000 -v ${PWD}:/docs athackst/mkdocs-simple-plugin</code></pre>
+
+</li>
+<li>
+<p>Deploy to gh-pages</p>
+<pre class="highlight"><code class="language-bash">docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs athackst/mkdocs-simple-plugin mkdocs gh-deploy</code></pre>
+
+</li>
+</ul>
+<h2 id="build-from-source">Build from source<a class="headerlink" href="#build-from-source" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>You will need to have <a href="https://www.mkdocs.org/">mkdocs</a> installed on your system.  I recommend installing it via pip to get the latest version.</p>
+<pre class="highlight"><code class="language-bash">sudo apt-get install python-pip
+pip install --upgrade pip --user
+pip install mkdocs --user</code></pre>
+
+<p>If you want to run the test suite, you&rsquo;ll also need &lsquo;bats&rsquo;</p>
+<pre class="highlight"><code class="language-bash">sudo apt-get install bats</code></pre>
+
+<h3 id="develop">Develop<a class="headerlink" href="#develop" title="Permanent link">&para;</a></h3>
+<p>Install the package locally with</p>
+<pre class="highlight"><code class="language-bash">pip install -e .</code></pre>
+
+<p>Testing involves both linting with flake8</p>
+<pre class="highlight"><code class="language-bash">./tests/test_flake8.sh</code></pre>
+
+<p>and testing with <code>bats</code></p>
+<pre class="highlight"><code class="language-bash">./tests/integration/test.bats</code></pre>
+
+<p>If you want to test against all the different versions of python, run the local test script.</p>
+<pre class="highlight"><code class="language-bash">./tests/test_local.sh</code></pre>
+
 <!--TODO github integration -->
 
 <h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
@@ -232,5 +276,5 @@ ignore_directories: # Folders that should be ignored to add md files
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-05-08 05:45:11
+Build Date UTC : 2020-05-12 06:31:33
 -->
