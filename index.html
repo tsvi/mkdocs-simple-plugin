@@ -83,6 +83,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING/">Contributing</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Mkdocs simple plugin</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="mkdocs_simple_plugin/">Package Description</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -150,6 +155,7 @@
 <pre class="highlight"><code class="language-bash">mkdocs_simple_gen</code></pre>
 
 <p>and you&rsquo;re all set!</p>
+<p>See <a href="mkdocs_simple_plugin/#mkdocs_simple_gen">mkdocs_simple_gen</a> for more info.</p>
 <h4 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h4>
 <p>Advanced usage is <em>also</em> easy.</p>
 <p>Create a <code>mkdocs.yml</code> file in the root of your directory and add this plugin to it&rsquo;s plugin list.</p>
@@ -157,13 +163,7 @@
 plugins:
   - simple</code></pre>
 
-<p>If you&rsquo;d like, you can specify some additional configuration settings.</p>
-<pre class="highlight"><code class="language-yaml"># simple plugin configuration options
-ignore_hidden: True # Ignore md files in hidden directories (those starting with a '.')
-ignore_directories: # Folders that should be ignored to add md files
-  - "drafts"</code></pre>
-
-<p>Note:  Files in the <code>docs_dir</code> (by default <code>docs</code>) will be merged with any other documentation in your repository.</p>
+<p>See <a href="mkdocs_simple_plugin/#mkdocs-simple-plugin">mkdocs-simple-plugin</a> for more info.</p>
 <p>Then, you can build the mkdocs from the command line.</p>
 <pre class="highlight"><code class="language-bash">mkdocs build</code></pre>
 
@@ -175,28 +175,13 @@ ignore_directories: # Folders that should be ignored to add md files
 <p>After you build, you&rsquo;ll need to initialize your deployment by running the gh-deploy command for mkdocs.  This will set up the gh-pages branch and copy the site over.</p>
 <pre class="highlight"><code class="language-bash">mkdocs gh-deploy</code></pre>
 
-<p>Next, you&rsquo;ll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a> for more information.</p>
+<p>Then you&rsquo;ll need to set up your github repository to enable gh-pages support. See <a href="https://pages.github.com/">Github Pages</a> for more information.</p>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
-<p>Additionally, you can use this plugin using the <code>athackst/mkdocs-simple-plugin</code> docker image.</p>
+<p>Additionally, you can use this plugin with the <code>athackst/mkdocs-simple-plugin</code> docker image.</p>
 <p>By using the docker image, you don&rsquo;t need to have the plugin or its dependencies installed on your system.</p>
-<p>Below are some useful commands:</p>
-<ul>
-<li>
-<p>Build your docs</p>
-<pre class="highlight"><code class="language-bash">docker run --rm -it -v ${PWD}:/docs athackst/mkdocs-simple-plugin mkdocs_simple_gen</code></pre>
+<p>Install, build and serve your docs:</p>
+<pre class="highlight"><code class="language-bash">docker run --rm -it -v --network=host ${PWD}:/docs athackst/mkdocs-simple-plugin</code></pre>
 
-</li>
-<li>
-<p>Run a local server</p>
-<pre class="highlight"><code class="language-bash">docker run --rm -it -p 8000:8000 -v ${PWD}:/docs athackst/mkdocs-simple-plugin</code></pre>
-
-</li>
-<li>
-<p>Deploy to gh-pages</p>
-<pre class="highlight"><code class="language-bash">docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs athackst/mkdocs-simple-plugin mkdocs gh-deploy</code></pre>
-
-</li>
-</ul>
 <h2 id="build-from-source">Build from source<a class="headerlink" href="#build-from-source" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>You will need to have <a href="https://www.mkdocs.org/">mkdocs</a> installed on your system.  I recommend installing it via pip to get the latest version.</p>
@@ -275,6 +260,6 @@ pip install mkdocs --user</code></pre>
 </html>
 
 <!--
-MkDocs version : 1.1
-Build Date UTC : 2020-05-12 06:31:33
+MkDocs version : 1.1.1
+Build Date UTC : 2020-05-13 05:43:50.988366+00:00
 -->
