@@ -180,8 +180,50 @@ plugins:
 <p>Additionally, you can use this plugin with the <code>athackst/mkdocs-simple-plugin</code> docker image.</p>
 <p>By using the docker image, you don&rsquo;t need to have the plugin or its dependencies installed on your system.</p>
 <p>Install, build and serve your docs:</p>
-<pre class="highlight"><code class="language-bash">docker run --rm -it -v --network=host ${PWD}:/docs athackst/mkdocs-simple-plugin</code></pre>
+<pre class="highlight"><code class="language-bash">docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) -e HOME=/tmp athackst/mkdocs-simple-plugin</code></pre>
 
+<p>Explanation of docker command line options</p>
+<table>
+<thead>
+<tr>
+<th align="left">command</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--rm</code></td>
+<td align="left">[optional] remove the docker image after it finishes running</td>
+</tr>
+<tr>
+<td align="left"><code>-it</code></td>
+<td align="left">[optional] run in an interactive terminal</td>
+</tr>
+<tr>
+<td align="left"><code>--network=host</code></td>
+<td align="left">Attach to the host network (needed for serving the doc site locally)</td>
+</tr>
+<tr>
+<td align="left"><code>-v ${PWD}:/docs</code></td>
+<td align="left">Mount the local directory into the docs directory to build site.</td>
+</tr>
+<tr>
+<td align="left"><code>--user $(id -u):$(id -g)</code></td>
+<td align="left">[recommended] Run the docker container with the current user and group</td>
+</tr>
+<tr>
+<td align="left"><code>-e HOME=/tmp</code></td>
+<td align="left">[recommended] Use the tmp directory for the home directory for the user (needed if you need to install dependencies).</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="mkdocs_simple_plugin/#mkdocs_simple_gen">mkdocs_simple_gen</a> for a list of command line options you can set.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Add an alias for the docker command to serve docs from any workspace.</p>
+<pre class="highlight"><code class="language-bash">echo 'alias mkdocs_simple="docker run --rm -it --network=host -v ${PWD}:/docs --user $(id -u):$(id -g) -e HOME=/tmp athackst/mkdocs-simple-plugin"' &gt;&gt; ~/.bashrc</code></pre>
+
+</div>
 <h2 id="build-from-source">Build from source<a class="headerlink" href="#build-from-source" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>You will need to have <a href="https://www.mkdocs.org/">mkdocs</a> installed on your system.  I recommend installing it via pip to get the latest version.</p>
@@ -261,5 +303,5 @@ pip install mkdocs --user</code></pre>
 
 <!--
 MkDocs version : 1.1.1
-Build Date UTC : 2020-05-13 05:43:50.988366+00:00
+Build Date UTC : 2020-05-14 05:00:08.699349+00:00
 -->
