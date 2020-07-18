@@ -116,8 +116,10 @@
 <pre class="highlight"><code class="language-yaml">site_name: your_site_name
 plugins:
   - simple:
+      # Optional setting to only include specific folders
+      include_folders: ["*"]
       # Optional setting to ignore specific folders
-      ignore_folders: ["tests"]
+      ignore_folders: [""]
       # Optional setting to specify if hidden folders should be ignored
       ignore_hidden: True</code></pre>
 
